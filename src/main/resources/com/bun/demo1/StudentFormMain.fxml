@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bun.demo1.StudentFormController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="215.0" layoutY="215.0" prefHeight="942.0" prefWidth="1418.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-44.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="113.0" prefWidth="1325.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="img0" fitHeight="100.0" fitWidth="1206.0" layoutX="128.0" layoutY="62.0">
+                           <image>
+                              <Image url="@LOGIN%20FORM.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="225.0" layoutY="100.0" text="WELCOME," textFill="WHITE">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="student_username" layoutX="350.0" layoutY="100.0" text="ADMIN!" textFill="WHITE">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="home_btn" layoutX="772.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchForm" text="Home" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="studentProfile_btn" layoutX="866.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchForm" text="Profile" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="studentSubjects_btn" layoutX="965.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchForm" text="Subjects" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="logout" layoutX="1226.0" layoutY="80.0" mnemonicParsing="false" onAction="#logout" text="Logout" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="studentGrade_btn" layoutX="1072.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchForm" text="View Grades" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="img0" fitHeight="68.0" fitWidth="74.0" layoutX="144.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="782.0" prefWidth="195.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="img0_2" fitHeight="727.0" fitWidth="104.0" layoutX="124.0" layoutY="-15.0">
+                           <image>
+                              <Image url="@LOGIN%20FORM.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="782.0" prefWidth="1144.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="home_form" prefHeight="707.0" prefWidth="1288.0" visible="false" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-102.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="707.0" prefWidth="1096.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fitHeight="83.0" fitWidth="1023.0" layoutX="40.0" layoutY="32.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="112.0" layoutY="45.0" prefHeight="57.0" prefWidth="899.0" text="LINCOLN NATIONAL HIGH SCHOOL" textFill="#f2e9e3">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="48.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="40.0" layoutY="121.0" prefHeight="150.0" prefWidth="1025.0" text="Lincoln High School was founded in 2004 to meet the educational needs of the community. Starting as a small institution, it &#10;has grown into a comprehensive high school known for academic excellence. Over the years, the school has expanded its &#10;facilities and programs, fostering a supportive and inclusive environment. &#10;&#10;Today, Lincoln High is dedicated to helping students excel academically and develop as responsible individuals, maintaining &#10;strong ties to the community." textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="16.5" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="377.0" fitWidth="1100.0" layoutY="332.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@BEIGE.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="218.0" fitWidth="232.0" layoutX="32.0" layoutY="422.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="219.0" fitWidth="232.0" layoutX="301.0" layoutY="421.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="218.0" fitWidth="232.0" layoutX="571.0" layoutY="422.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="217.0" fitWidth="232.0" layoutX="842.0" layoutY="423.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="92.0" layoutY="360.0" prefHeight="58.0" prefWidth="116.0" text="VISION" textFill="#002c59">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="416.0" layoutY="268.0" prefHeight="58.0" prefWidth="312.0" text="VMGO OF LNHS" textFill="#002c59">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="38.0" layoutY="441.0" prefHeight="170.0" prefWidth="225.0" text="To be a leading &#10;educational institution that &#10;nurtures well-rounded &#10;individuals who excel &#10;academically and contribute &#10;positively to society" textAlignment="CENTER" textFill="#dcd5bc">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="349.0" layoutY="360.0" prefHeight="58.0" prefWidth="147.0" text="MISSION" textFill="#002c59">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="321.0" layoutY="447.0" prefHeight="170.0" prefWidth="201.0" text="Provide a safe and &#10;inclusive environment &#10;that fosters academic &#10;excellence, creativity, &#10;and critical thinking. " textAlignment="CENTER" textFill="#dcd5bc">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="628.0" layoutY="360.0" prefHeight="58.0" prefWidth="116.0" text="GOALS" textFill="#002c59">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="856.0" layoutY="360.0" prefHeight="58.0" prefWidth="211.0" text="OBJECTIVES" textFill="#002c59">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="585.0" layoutY="445.0" prefHeight="170.0" prefWidth="222.0" text="1. Enhance student &#10;    achievement.&#10;2. Promote diversity &#10;    and equity.&#10;3. Strengthen community &#10;    partnerships.&#10;4. Foster leadership.&#10;5. Support wellness." textFill="#dcd5bc">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="863.0" layoutY="430.0" prefHeight="206.0" prefWidth="218.0" text="1. Implement rigorous &#10;    academic programs.&#10;2, Organize cultural &#10;    diversity events.&#10;3. Establish ties with &#10;    local businesses.&#10;4. Develop student-led &#10;    community initiatives.&#10;5. Provide mental health &#10;    resources." textFill="#dcd5bc">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="studentProfile_form" layoutX="3.0" prefHeight="806.0" prefWidth="1147.0" visible="false" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="86.0" layoutY="56.0" prefHeight="668.0" prefWidth="1130.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fitHeight="713.0" fitWidth="1101.0" layoutX="-1.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@NEW%20B.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="260.0" fitWidth="262.0" layoutX="35.0" layoutY="105.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="studentImageView" fitHeight="242.0" fitWidth="250.0" layoutX="46.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="63.0" fitWidth="396.0" layoutX="341.0" layoutY="194.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="63.0" fitWidth="396.0" layoutX="341.0" layoutY="302.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="252.0" fitWidth="695.0" layoutX="34.0" layoutY="413.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LIGHTERBEIGE.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="48.0" fitWidth="282.0" layoutX="63.0" layoutY="498.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="48.0" fitWidth="282.0" layoutX="65.0" layoutY="581.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="48.0" fitWidth="282.0" layoutX="424.0" layoutY="498.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="48.0" fitWidth="282.0" layoutX="424.0" layoutY="581.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="27.0" layoutY="13.0" prefHeight="78.0" prefWidth="555.0" text="Student Profile" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="64.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="35.0" layoutY="377.0" text="Student ID Number:" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="studentIDLabel" layoutX="223.0" layoutY="378.0" prefHeight="19.0" prefWidth="105.0" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="16.0" />
+                                       </font></Label>
+                                    <Label layoutX="343.0" layoutY="172.0" text="Name:" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="nameLabel" layoutX="353.0" layoutY="204.0" prefHeight="43.0" prefWidth="365.0" textFill="#e1ded5">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="340.0" layoutY="279.0" text="Status:" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="statusLabel" layoutX="351.0" layoutY="312.0" prefHeight="43.0" prefWidth="368.0" textFill="#e1ded5">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="24.0" />
+                                       </font></Label>
+                                    <Label layoutX="45.0" layoutY="404.0" prefHeight="78.0" prefWidth="283.0" text="More Information" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="60.0" layoutY="472.0" text="Birthdate:" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="birthDateLabel" layoutX="71.0" layoutY="504.0" prefHeight="35.0" prefWidth="266.0" textFill="#e1ded5">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="24.0" />
+                                       </font></Label>
+                                    <Label layoutX="62.0" layoutY="557.0" text="Gender:" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="genderLabel" layoutX="73.0" layoutY="591.0" prefHeight="24.0" prefWidth="262.0" textFill="#e1ded5" wrapText="true">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="24.0" />
+                                       </font></Label>
+                                    <Label layoutX="424.0" layoutY="471.0" text="Section:" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="sectionLabel" graphicTextGap="0.0" layoutX="435.0" layoutY="507.0" prefHeight="30.0" prefWidth="259.0" textFill="#e1ded5">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="24.0" />
+                                       </font></Label>
+                                    <Label layoutX="424.0" layoutY="557.0" text="Year Level:" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="yearLabel" layoutX="437.0" layoutY="590.0" prefHeight="32.0" prefWidth="258.0" textFill="#e1ded5">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="24.0" />
+                                       </font></Label>
+                                    <AnchorPane fx:id="home_displayClock" layoutX="751.0" layoutY="81.0" prefHeight="265.0" prefWidth="270.0" />
+                                    <Label layoutX="739.0" layoutY="515.0" text="&quot;Live as if you were to die tomorrow.&#10;Learn as if you were to live forever.&quot;&#10;&#10;                   " textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="907.0" layoutY="581.0" text="- Mahatma Gandhi" textFill="#001e59">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="viewSubjects_form" prefHeight="712.0" prefWidth="1103.0" visible="false" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="698.0" prefWidth="1089.0">
+                                 <children>
+                                    <Label fx:id="statusMessage" layoutX="57.0" layoutY="26.0" prefHeight="50.0" prefWidth="965.0" textFill="#102a73">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="36.0" />
+                                       </font></Label>
+                                    <Label fx:id="subjectTitle" layoutX="57.0" layoutY="76.0" prefHeight="50.0" prefWidth="965.0" textFill="#102a73">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="math_subject" layoutX="57.0" layoutY="180.0" prefHeight="40.0" prefWidth="500.0" textFill="#102a73">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font></Label>
+                                    <Label fx:id="english_subject" layoutX="57.0" layoutY="220.0" prefHeight="40.0" prefWidth="500.0" textFill="#102a73">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font></Label>
+                                    <Label fx:id="filipino_subject" layoutX="57.0" layoutY="260.0" prefHeight="40.0" prefWidth="500.0" textFill="#102a73">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font></Label>
+                                    <Label fx:id="science_subject" layoutX="57.0" layoutY="300.0" prefHeight="40.0" prefWidth="500.0" textFill="#102a73">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font></Label>
+                                    <Label fx:id="tle_subject" layoutX="57.0" layoutY="340.0" prefHeight="40.0" prefWidth="500.0" textFill="#102a73">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font></Label>
+                                    <Label fx:id="ap_subject" layoutX="57.0" layoutY="380.0" prefHeight="40.0" prefWidth="500.0" textFill="#102a73">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font></Label>
+                                    <Label fx:id="mapeh_subject" layoutX="57.0" layoutY="420.0" prefHeight="40.0" prefWidth="500.0" textFill="#102a73">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font></Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="viewGrades_form" layoutY="-1.0" prefHeight="758.0" prefWidth="1769.0" visible="false" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-485.0" AnchorPane.topAnchor="-1.0">
+                           <children>
+                              <AnchorPane prefHeight="674.0" prefWidth="1164.0" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="573.0" AnchorPane.topAnchor="1.0">
+                                 <children>
+                                    <ImageView fitHeight="83.0" fitWidth="1029.0" layoutX="37.0" layoutY="71.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@NEW%20B.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow radius="9.415" spread="1.0" width="18.66">
+                                             <color>
+                                                <Color red="0.01824561320245266" green="0.11525145918130875" blue="0.5473684072494507" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </ImageView>
+                                    <ImageView fitHeight="428.0" fitWidth="1028.0" layoutX="36.0" layoutY="223.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@NEW%20B.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow radius="9.415" spread="1.0" width="18.66">
+                                             <color>
+                                                <Color red="0.01824561320245266" green="0.11525145918130875" blue="0.5473684072494507" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </ImageView>
+                                    <ImageView fitHeight="43.0" fitWidth="306.0" layoutX="741.0" layoutY="418.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="43.0" fitWidth="306.0" layoutX="741.0" layoutY="461.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LIGHTERBEIGE.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="875.0" layoutY="116.0" prefHeight="22.0" prefWidth="123.0" text="2024 - 2025" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="288.0" layoutY="234.0" prefHeight="30.0" prefWidth="228.0" text="Overall Rating" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="537.0" layoutY="235.0" prefHeight="30.0" prefWidth="206.0" text="Final Grade" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="516.0" layoutY="85.0" prefHeight="22.0" prefWidth="88.0" text="Grade:" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="306.0" layoutY="11.0" prefHeight="39.0" prefWidth="548.0" text="Lincoln National High School" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="58.0" layoutY="85.0" prefHeight="22.0" prefWidth="198.0" text="Student ID Number:" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="753.0" layoutY="85.0" prefHeight="22.0" prefWidth="88.0" text="Section:" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="105.0" layoutY="234.0" prefHeight="30.0" prefWidth="164.0" text="Subjects" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="58.0" layoutY="116.0" prefHeight="22.0" prefWidth="478.0" text="Total number of days to attend in one School Year:" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="516.0" layoutY="116.0" prefHeight="22.0" prefWidth="92.0" text="165 Days" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="753.0" layoutY="116.0" prefHeight="22.0" prefWidth="122.0" text="School Year:" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="70.0" layoutY="301.0" prefHeight="27.0" prefWidth="167.0" text="Mathematics" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="70.0" layoutY="349.0" prefHeight="27.0" prefWidth="189.0" text="English" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="69.0" layoutY="394.0" prefHeight="27.0" prefWidth="91.0" text="Filipino" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="70.0" layoutY="441.0" prefHeight="27.0" prefWidth="106.0" text="Science" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="72.0" layoutY="478.0" prefHeight="63.0" prefWidth="343.0" text="Technology and &#10;Livelihood Education " textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="71.0" layoutY="540.0" prefHeight="51.0" prefWidth="276.0" text="Araling Panlipunan" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="71.0" layoutY="599.0" prefHeight="27.0" prefWidth="169.0" text="MAPEH" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="263.7998962402344" endY="1.52587890625E-5" layoutX="166.0" layoutY="192.0" startX="-130.0" stroke="#1240a4" />
+                                    <Label layoutX="454.0" layoutY="173.0" prefHeight="30.0" prefWidth="244.0" text="GRADE REPORTS" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="130.0" endY="1.20001220703125" layoutX="932.0" layoutY="186.0" startX="-236.00006103515625" startY="1.1999969482421875" stroke="#1240a4" />
+                                    <Line endX="607.2000122070312" layoutX="112.0" layoutY="275.0" startX="-42.400108337402344" startY="1.52587890625E-5" />
+                                    <Label fx:id="math_grade" layoutX="366.0" layoutY="296.0" prefHeight="18.0" prefWidth="162.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="english_grade" layoutX="367.0" layoutY="345.0" prefHeight="34.0" prefWidth="162.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="filipino_grade" layoutX="366.0" layoutY="390.0" prefHeight="34.0" prefWidth="163.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="science_grade" layoutX="368.0" layoutY="440.0" prefHeight="30.0" prefWidth="160.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="tle_grade" layoutX="368.0" layoutY="493.0" prefHeight="36.0" prefWidth="160.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="ap_grade" layoutX="369.0" layoutY="546.0" prefHeight="39.0" prefWidth="159.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="mapeh_grade" layoutX="369.0" layoutY="598.0" prefHeight="38.0" prefWidth="162.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="nameGrade" layoutX="249.0" layoutY="85.0" prefHeight="22.0" prefWidth="190.0" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="levelGrade" layoutX="584.0" layoutY="83.0" prefHeight="27.0" prefWidth="161.0" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="sectionGrade" layoutX="844.0" layoutY="85.0" prefHeight="22.0" prefWidth="97.0" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="final_grade" layoutX="593.0" layoutY="299.0" prefHeight="35.0" prefWidth="44.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="982.0" layoutY="391.0" prefHeight="19.0" prefWidth="77.0" text="Remarks" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="747.0" layoutY="392.0" prefHeight="19.0" prefWidth="98.0" text="Descriptor" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="853.0" layoutY="392.0" prefHeight="19.0" prefWidth="115.0" text="Grading Scale" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="43.0" fitWidth="306.0" layoutX="741.0" layoutY="504.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="43.0" fitWidth="306.0" layoutX="741.0" layoutY="547.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LIGHTERBEIGE.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="43.0" fitWidth="306.0" layoutX="741.0" layoutY="590.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="748.0" layoutY="474.0" prefHeight="19.0" prefWidth="139.0" text="Very Satisfactory" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="749.0" layoutY="561.0" prefHeight="19.0" prefWidth="139.0" text="Fairly Satisfactory" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="887.0" layoutY="474.0" prefHeight="19.0" prefWidth="47.0" text="85-89" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="888.0" layoutY="561.0" prefHeight="19.0" prefWidth="47.0" text="75-79" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="996.0" layoutY="474.0" prefHeight="19.0" prefWidth="47.0" text="Passed" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="997.0" layoutY="561.0" prefHeight="19.0" prefWidth="46.0" text="Passed" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="748.0" layoutY="430.0" prefHeight="19.0" prefWidth="79.0" text="Outstanding" textFill="#f4e7b9">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="750.0" layoutY="516.0" prefHeight="19.0" prefWidth="79.0" text="Satisfactory" textFill="#f4e7b9">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="750.0" layoutY="596.0" prefHeight="29.0" prefWidth="156.0" text="Did Not Meet&#10;Expectations&#10;" textFill="#f4e7b9">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="885.0" layoutY="431.0" prefHeight="19.0" prefWidth="46.0" text="90-100" textFill="#f4e7b9">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="888.0" layoutY="517.0" prefHeight="19.0" prefWidth="42.0" text="80-84" textFill="#f4e7b9">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="882.0" layoutY="603.0" prefHeight="19.0" prefWidth="68.0" text="Below 75" textFill="#f4e7b9">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="996.0" layoutY="431.0" prefHeight="19.0" prefWidth="52.0" text="Passed" textFill="#f4e7b9">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="997.0" layoutY="518.0" prefHeight="19.0" prefWidth="47.0" text="Passed" textFill="#f4e7b9">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="997.0" layoutY="602.0" prefHeight="19.0" prefWidth="47.0" text="Passed" textFill="#f4e7b9">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="832.0" layoutY="353.0" prefHeight="19.0" prefWidth="140.0" text="Grading System" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="747.0" layoutY="251.0" prefHeight="81.0" prefWidth="327.0" text="&quot;Grades don't define you, but they can &#10;reflect your effort and dedication.&quot;" textFill="#1d2a84">
+                                       <font>
+                                          <Font name="Bookman Old Style Italic" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

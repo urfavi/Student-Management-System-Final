@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bun.demo1.AdminFormMainController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <AnchorPane prefHeight="132.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="img0_1" fitHeight="132.0" fitWidth="1200.0">
+                           <image>
+                              <Image url="@LOGIN%20FORM.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img0" fitHeight="100.0" fitWidth="105.0" layoutX="21.0" layoutY="14.0">
+                           <image>
+                              <Image url="@logo_llu.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="133.0" layoutY="52.0" text="WELCOME," textFill="WHITE">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="home_btn" layoutX="673.0" layoutY="52.0" mnemonicParsing="false" onAction="#switchForm" text="Home" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="addStudents_btn" layoutX="773.0" layoutY="52.0" mnemonicParsing="false" onAction="#switchForm" text="Students" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="availableSection_btn" layoutX="902.0" layoutY="52.0" mnemonicParsing="false" onAction="#switchForm" text="Sections" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="studentGrade_btn" layoutX="1023.0" layoutY="52.0" mnemonicParsing="false" onAction="#switchForm" text="Grade Reports" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="logout" layoutX="1121.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" text="Logout" textFill="#092751">
+                           <font>
+                              <Font name="Bookman Old Style" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="admin_username" layoutX="260.0" layoutY="52.0" text="ADMIN!" textFill="WHITE">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="668.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="img0_2" fitHeight="668.0" fitWidth="70.0">
+                           <image>
+                              <Image url="@LOGIN%20FORM.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="668.0" prefWidth="1028.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="home_form" layoutX="388.0" layoutY="205.0" prefHeight="668.0" prefWidth="1130.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="18.0" layoutY="14.0" prefHeight="633.0" prefWidth="1093.0">
+                                 <children>
+                                    <AnchorPane layoutX="25.0" layoutY="20.0" prefHeight="597.0" prefWidth="307.0">
+                                       <children>
+                                          <AnchorPane layoutX="21.0" layoutY="24.0" prefHeight="120.0" prefWidth="265.0">
+                                             <children>
+                                                <ImageView fx:id="img1_1" fitHeight="120.0" fitWidth="265.0">
+                                                   <image>
+                                                      <Image url="@LOGIN%20FORM.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="21.0" layoutY="88.0" text="Total Enrolled Students" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="home_totalEnrolled" layoutX="123.0" layoutY="23.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="21.0" layoutY="165.0" prefHeight="120.0" prefWidth="265.0">
+                                             <children>
+                                                <ImageView fx:id="img1_2" fitHeight="120.0" fitWidth="265.0">
+                                                   <image>
+                                                      <Image url="@LOGIN%20FORM.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="9.0" layoutY="91.0" text="Total Enrolled Female Students" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="home_totalFemale" layoutX="123.0" layoutY="28.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="21.0" layoutY="310.0" prefHeight="120.0" prefWidth="265.0">
+                                             <children>
+                                                <ImageView fx:id="img1_3" fitHeight="120.0" fitWidth="265.0">
+                                                   <image>
+                                                      <Image url="@LOGIN%20FORM.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="18.0" layoutY="91.0" text="Total Enrolled Male Students" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="home_totalMale" layoutX="122.0" layoutY="26.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="3.0" layoutY="449.0" prefHeight="120.0" prefWidth="125.0">
+                                             <children>
+                                                <ImageView fx:id="img1_31" fitHeight="120.0" fitWidth="125.0">
+                                                   <image>
+                                                      <Image url="@LOGIN%20FORM.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="9.0" layoutY="69.0" text="Total Pending" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="28.0" layoutY="87.0" text="Students" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="home_totalPending" layoutX="53.0" layoutY="23.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="174.0" layoutY="449.0" prefHeight="120.0" prefWidth="125.0">
+                                             <children>
+                                                <ImageView fx:id="img1_32" fitHeight="120.0" fitWidth="125.0">
+                                                   <image>
+                                                      <Image url="@LOGIN%20FORM.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="9.0" layoutY="69.0" text="Total Dropped" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="28.0" layoutY="87.0" text="Students" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="home_totalDropped" layoutX="53.0" layoutY="23.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Bookman Old Style Bold" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="534.0" layoutY="48.0" prefHeight="106.0" prefWidth="398.0">
+                                       <children>
+                                          <ImageView fx:id="img_date" fitHeight="110.0" fitWidth="397.0" layoutX="1.0">
+                                             <image>
+                                                <Image url="@LOGIN%20FORM.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="home_displayDate" layoutX="45.0" layoutY="7.0" prefHeight="97.0" prefWidth="333.0" textAlignment="CENTER" textFill="#f8f8f8">
+                                             <font>
+                                                <Font name="Bookman Old Style Bold" size="50.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="home_displayClock" layoutX="502.0" layoutY="178.0" prefHeight="372.0" prefWidth="463.0" />
+                                    <Label fx:id="home_displayDigital" layoutX="628.0" layoutY="562.0" prefHeight="37.0" prefWidth="212.0" textFill="#092751">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="addStudents_form" layoutX="365.0" layoutY="189.0" prefHeight="668.0" prefWidth="1130.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="33.0" layoutY="33.0" prefHeight="597.0" prefWidth="1049.0">
+                                 <children>
+                                    <AnchorPane layoutX="386.0" layoutY="29.0" prefHeight="528.0" prefWidth="634.0">
+                                       <children>
+                                          <ImageView fx:id="img2_2" fitHeight="531.0" fitWidth="650.0">
+                                             <image>
+                                                <Image url="@LOGIN%20FORM.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="addStudents_search" layoutX="16.0" layoutY="25.0" onKeyTyped="#addStudentsSearch" prefHeight="31.0" prefWidth="217.0" promptText="Search Student" />
+                                          <TableView fx:id="addStudents_tableView" layoutX="16.0" layoutY="74.0" onMouseClicked="#addStudentsSelect" prefHeight="440.0" prefWidth="603.0">
+                                            <columns>
+                                              <TableColumn fx:id="addStudents_col_studentID" prefWidth="53.0" text="ID" />
+                                              <TableColumn fx:id="addStudents_col_year" prefWidth="67.0" text="Year" />
+                                                <TableColumn fx:id="addStudents_col_section" prefWidth="52.0" text="Section" />
+                                                <TableColumn fx:id="addStudents_col_lastName" prefWidth="111.0" text="Last Name" />
+                                                <TableColumn fx:id="addStudents_col_firstName" prefWidth="100.0" text="First Name" />
+                                                <TableColumn fx:id="addStudents_col_birth" prefWidth="76.0" text="Birth Date" />
+                                                <TableColumn fx:id="addStudents_col_gender" prefWidth="59.0" text="Gender" />
+                                                <TableColumn fx:id="addStudents_col_status" prefWidth="84.0" text="Status" />
+                                            </columns>
+                                          </TableView>
+                                          <Label layoutX="369.0" layoutY="14.0" text="List of Students" textFill="WHITE">
+                                             <font>
+                                                <Font name="Bookman Old Style Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <ImageView fx:id="img2_1" fitHeight="600.0" fitWidth="374.0" layoutX="-7.0" layoutY="-1.0">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="103.0" layoutY="14.0" text="ADD STUDENT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="203.0" text="ID:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addStudents_studentID" layoutX="128.0" layoutY="201.0" prefHeight="19.0" prefWidth="149.0" />
+                                    <Label layoutX="14.0" layoutY="239.0" text="Year:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="addStudents_year" layoutX="127.0" layoutY="237.0" onAction="#addStudentsYearList" prefWidth="150.0" promptText="Select Year" />
+                                    <Label layoutX="14.0" layoutY="276.0" text="Section:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="addStudents_section" layoutX="127.0" layoutY="274.0" onAction="#addStudentsSectionList" prefWidth="150.0" promptText="Select Section" />
+                                    <Label layoutX="14.0" layoutY="321.0" text="Last Name:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addStudents_lastName" layoutX="127.0" layoutY="318.0" prefHeight="25.0" prefWidth="205.0" />
+                                    <Label layoutX="14.0" layoutY="357.0" text="First Name:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addStudents_firstName" layoutX="127.0" layoutY="355.0" prefHeight="25.0" prefWidth="205.0" />
+                                    <Label layoutX="14.0" layoutY="392.0" text="Gender:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="addStudents_gender" layoutX="127.0" layoutY="390.0" onAction="#addStudentsGenderList" prefWidth="150.0" promptText="Select Gender" />
+                                    <Label layoutX="14.0" layoutY="432.0" text="Birth Date:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="addStudents_birth" layoutX="127.0" layoutY="430.0" />
+                                    <Label layoutX="16.0" layoutY="466.0" text="Status:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="addStudents_status" layoutX="127.0" layoutY="463.0" onAction="#addStudentsStatusList" prefWidth="150.0" promptText="Select Status" />
+                                    <AnchorPane layoutX="118.0" layoutY="47.0" prefHeight="115.0" prefWidth="124.0">
+                                       <children>
+                                          <ImageView fx:id="addStudents_imageView" fitHeight="115.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Button fx:id="addStudents_insertBtn" layoutX="21.0" layoutY="89.0" mnemonicParsing="false" onAction="#addStudentsInsertImage" text="Insert Image" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="addStudents_addBtn" layoutX="22.0" layoutY="535.0" mnemonicParsing="false" onAction="#addStudentsAdd" text="Add">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addStudents_updateBtn" layoutX="92.0" layoutY="535.0" mnemonicParsing="false" onAction="#addStudentsUpdate" text="Update">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addStudents_deleteBtn" layoutX="191.0" layoutY="535.0" mnemonicParsing="false" onAction="#addStudentsDelete" text="Delete">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addStudents_clearBtn" layoutX="277.0" layoutY="535.0" mnemonicParsing="false" onAction="#addStudentsClear" text="Clear">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="availableSection_form" layoutX="244.0" layoutY="167.0" prefHeight="668.0" prefWidth="1130.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="39.0" layoutY="41.0" prefHeight="600.0" prefWidth="290.0">
+                                 <children>
+                                    <ImageView fx:id="img3_1" fitHeight="600.0" fitWidth="290.0">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="86.0" layoutY="24.0" text="Add Section" textFill="#fffefe">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="112.0" layoutY="120.0" text="Section:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="availableSection_section" layoutX="71.0" layoutY="151.0" />
+                                    <Label layoutX="91.0" layoutY="230.0" text="Description:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="110.0" layoutY="339.0" text="Adviser:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="availableSection_adviser" layoutX="35.0" layoutY="374.0" prefHeight="25.0" prefWidth="216.0" />
+                                    <Button fx:id="availableSection_addBtn" layoutX="62.0" layoutY="444.0" mnemonicParsing="false" onAction="#availableSectionAdd" text="Add" textFill="#092751">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="availableSection_updateBtn" layoutX="164.0" layoutY="444.0" mnemonicParsing="false" onAction="#availableSectionUpdate" text="Update" textFill="#092751">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="availableSection_clearBtn" layoutX="57.0" layoutY="497.0" mnemonicParsing="false" onAction="#availableSectionClear" text="Clear" textFill="#092751">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="availableSection_deleteBtn" layoutX="167.0" layoutY="497.0" mnemonicParsing="false" onAction="#availableSectionDelete" text="Delete" textFill="#092751">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="availableSection_description" layoutX="35.0" layoutY="268.0" prefHeight="25.0" prefWidth="216.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="356.0" layoutY="41.0" prefHeight="600.0" prefWidth="650.0">
+                                 <children>
+                                    <ImageView fx:id="img3_2" fitHeight="600.0" fitWidth="650.0">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="234.0" layoutY="28.0" text="Available Sections" textFill="#fffefe">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="availableSection_tableView" layoutX="30.0" layoutY="78.0" onMouseClicked="#availableSectionSelect" prefHeight="489.0" prefWidth="586.0">
+                                      <columns>
+                                        <TableColumn fx:id="availableSection_col_section" prefWidth="93.0" text="Section" />
+                                          <TableColumn fx:id="availableSection_col_description" prefWidth="233.0" text="Description" />
+                                          <TableColumn fx:id="availableSection_col_adviser" prefWidth="259.0" text="Adviser" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="studentGrade_form" layoutX="131.0" layoutY="100.0" prefHeight="668.0" prefWidth="1130.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="34.0" layoutY="41.0" prefHeight="560.0" prefWidth="345.0">
+                                 <children>
+                                    <ImageView fx:id="img4_1" fitHeight="560.0" fitWidth="345.0">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="57.0" layoutY="31.0" text="Update Student Grade" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="32.0" layoutY="86.0" text="ID:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="studentGrade_studentID" layoutX="71.0" layoutY="84.0" />
+                                    <Label layoutX="32.0" layoutY="137.0" text="Year:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="studentGrade_year" layoutX="118.0" layoutY="137.0" prefHeight="20.0" prefWidth="97.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="31.0" layoutY="165.0" text="Section:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="studentGrade_section" layoutX="115.0" layoutY="165.0" prefHeight="20.0" prefWidth="116.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="110.0" layoutY="205.0" text="SUBJECTS" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="31.0" layoutY="249.0" text="Math:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="studentGrade_mathematics" layoutX="212.0" layoutY="246.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Label layoutX="31.0" layoutY="282.0" text="English:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="studentGrade_basicenglish" layoutX="212.0" layoutY="279.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Label layoutX="30.0" layoutY="317.0" text="Filipino:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="studentGrade_fil" layoutX="212.0" layoutY="314.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Label layoutX="30.0" layoutY="351.0" text="Science:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="studentGrade_sci" layoutX="212.0" layoutY="348.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Label layoutX="32.0" layoutY="385.0" text="T.L.E:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="studentGrade_tech" layoutX="212.0" layoutY="382.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Label layoutX="30.0" layoutY="417.0" text="Araling Panlipunan:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="studentGrade_aralinP" layoutX="212.0" layoutY="414.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Label layoutX="31.0" layoutY="451.0" text="MAPEH:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="studentGrade_mapeh" layoutX="212.0" layoutY="448.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Button fx:id="studentGrade_updateBtn" layoutX="35.0" layoutY="499.0" mnemonicParsing="false" onAction="#studentGradesUpdate" text="Update" textFill="#092751">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="studentGrade_clearBtn" layoutX="143.0" layoutY="499.0" mnemonicParsing="false" onAction="#studentGradesClear" text="Clear" textFill="#092751">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="studentGrade_printBtn" layoutX="233.0" layoutY="499.0" mnemonicParsing="false" text="Print" textFill="#092751">
+                                       <font>
+                                          <Font name="Bookman Old Style" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="404.0" layoutY="41.0" prefHeight="560.0" prefWidth="675.0">
+                                 <children>
+                                    <ImageView fx:id="img4_2" fitHeight="560.0" fitWidth="675.0">
+                                       <image>
+                                          <Image url="@LOGIN%20FORM.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="254.0" layoutY="29.0" text="Students Grades" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="studentGrade_tableView" layoutX="36.0" layoutY="132.0" onMouseClicked="#studentGradesSelect" prefHeight="399.0" prefWidth="608.0">
+                                      <columns>
+                                        <TableColumn fx:id="studentGrade_col_studentID" prefWidth="65.0" text="ID" />
+                                        <TableColumn fx:id="studentGrade_col_year" prefWidth="74.0" text="Year" />
+                                          <TableColumn fx:id="studentGrade_col_section" prefWidth="50.0" text="Section" />
+                                          <TableColumn fx:id="studentGrade_col_mathematics" prefWidth="45.0" text="Math" />
+                                          <TableColumn fx:id="studentGrade_col_basicenglish" prefWidth="59.0" text="English" />
+                                          <TableColumn fx:id="studentGrade_col_fil" prefWidth="56.0" text="Filipino" />
+                                          <TableColumn fx:id="studentGrade_col_sci" prefWidth="56.0" text="Science" />
+                                          <TableColumn fx:id="studentGrade_col_tech" prefWidth="49.0" text="T.L.E" />
+                                          <TableColumn fx:id="studentGrade_col_aralinP" prefWidth="40.0" text="A.P" />
+                                          <TableColumn fx:id="studentGrade_col_mapeh" prefWidth="58.0" text="MAPEH" />
+                                          <TableColumn fx:id="studentGrade_col_final" prefWidth="55.0" text="Final" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField fx:id="studentGrade_search" layoutX="36.0" layoutY="80.0" onKeyTyped="#studentGradesSearch" prefHeight="31.0" prefWidth="225.0" promptText="Search Student" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
